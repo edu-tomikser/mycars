@@ -12,7 +12,7 @@ export class AuthService {
     domain: 'mycars.auth0.com',
     responseType: 'token id_token',
     audience: 'https://api.mycars.com',
-    redirectUri: 'http://mycars20180307.azurewebsites.net',
+    redirectUri: 'http://localhost:53331',
     scope: 'openid email'
   });
 
@@ -33,7 +33,7 @@ export class AuthService {
     });
   }
 
-  public login(): void {    
+  public login(): void {
     this.auth0.authorize();
   }
 
